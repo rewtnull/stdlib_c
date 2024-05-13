@@ -141,6 +141,6 @@ Similar restrictions may or may not apply for other functions, but my goal here 
 
 **License**
 
-This project is released under the MIT license. If you are a demo scener and choose to use any of this code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty crews of diViNE sTYLERs and UP ROUGH! :D
+This project is released under the MIT license. If you are a demo scener and choose to use any of this code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty crews of diViNE sTYLERs and UP ROUGH in your production! :D
 
 cheerios
