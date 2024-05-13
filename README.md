@@ -124,7 +124,7 @@ You can try these functions out by building like so:
 
 You can add the appropriate function calls to main_entry() to try them out, it should be pretty obvious how to do it.
 
-There are tons of size related optimization flags that can be used with gcc, but be careful using the -flto flag with this one as it can possibly break the variadic functions. It's a sneaky one and can appear to work under certain conditions but will likely make kernel32.dll segfault under others. There is no error handling here if api call arguments would get null arguments. You have been warned.
+There are tons of size related optimization flags that can be used with gcc, but be careful using the -flto flag with this one as it can possibly break the variadic functions. It's a sneaky one and can appear to work under certain conditions but will likely make kernel32.dll segfault under others. There is no error handling here if api call arguments would be null. You have been warned.
 
 
 
