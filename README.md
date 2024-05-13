@@ -137,3 +137,10 @@ As I have only included the functionality I need for my current project, some th
 One example is __printf(). In its current form it only supports %i, %d, %f, %s, and %p.
 
 Similar restrictions may or may not apply for other functions, but my goal here is not to make full replacements for the standard library.
+
+
+**License**
+
+This project is released under the MIT license. If you are a demo scener and choose to use any of this code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty crews of diViNE sTYLERs and UP ROUGH! :D
+
+cheerios
