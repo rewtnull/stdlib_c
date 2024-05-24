@@ -28,7 +28,7 @@
 
     I have chosen to typedef various data types so to not create conflicts with other possible
     definitions. Any platform agnostic typedefs use a stdr_ prefix (STDR_ for macro definitions).
-    As for platform dependant typedefs and macros, (only windows for now), I have chosen win_,
+    As for platform dependent typedefs and macros, (only windows for now), I have chosen win_,
     and WIN_ prefixes respectively. This should make it  easy to identify any platform dependent
     functions and definitions.
 
@@ -38,10 +38,10 @@
     what internal dependencies functions may have.
 
 
-**-- TARGETTED HEADERS --**
+**-- TARGETED HEADERS --**
 
 
-    The targetted headers are:
+    The targeted headers are:
 
 
     ctype.h, math.h, stdio.h, stddef.h, stdlib.h, string.h, unistd.h, wchar.h
@@ -226,8 +226,8 @@
     production can be.
 
     A few common size limitations can be 64kb, 40kb, and 4kb. This is the total size a self contained
-    executable is allowed to be, excluding api calls accessible directly in a newly installed operating
-    system.
+    executable is allowed to be, excluding api calls accessible directly in a newly installed
+    operating system.
 
     These size limitations will sometimes force demo scene developers to be creative, and this is one
     of the creative ways I aim to utilize for this challenge!
@@ -248,10 +248,10 @@
     various functions out.
 
 
-    There are tons of size related optimization flags that can be used with gcc, but be careful using the
-    -flto flag with this one as it can possibly break the variadic functions. It's a sneaky one and can
-    appear to work under certain conditions but will likely make kernel32.dll segfault under others.
-    There is no error handling here if api call arguments would be null when they shouldn't.
+    There are tons of size related optimization flags that can be used with gcc, but be careful using
+    the -flto flag with this one as it can possibly break the variadic functions. It's a sneaky one
+    and can appear to work under certain conditions but will likely make kernel32.dll segfault under
+    others. There is no error handling here if api call arguments would be null when they shouldn't.
     You have been warned.
 
 
@@ -262,17 +262,17 @@
 **-- Are these feature complete? --**
 
 
-    As I have only included the functionality I need for my current project, some things may be missing or
-    lacking compared to their standard library relatives. My goal here is not to make full replacements for
-    the standard library.
+    As I have only included the functionality I need for my current project, some things may be missing
+    or lacking compared to their standard library relatives. My goal here is not to make a full
+    replacement to the standard library.
 
 
 **License**
 
 
-    This project is released under the MIT license. If you are a demo scener and choose to use any of this
-    code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty crews
-    of diViNE sTYLERs, UP ROUGH, and TiTAN in your production! :D
+    This project is released under the MIT license. If you are a demo scener and choose to use any of
+    this code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty
+    crews of diViNE sTYLERs, UP ROUGH, and TiTAN in your production! :D
 
 
 Cheerios!
