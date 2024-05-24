@@ -3,34 +3,39 @@
 **-- ABOUT --**
 
 
-    stdr (C Standard Library Replacement) is a (fairly) modular subset replacement for a variety of C standard library functions.
-    If you aim at using that elusive -nostdlib flag in gcc, and/or want to size optimize your executables, these could be for you!
+    stdr (C Standard Library Replacement) is a (fairly) modular subset replacement for a variety of
+    C standard library functions. If you aim at using that elusive -nostdlib flag in gcc, and/or want
+    to size optimize your executables, these could be for you!
 
 
-    The goal of this project is to allow for drop-in replacement functions from various C Standard Libraries without the need to
-    include the complete library; you can lift out and use only the functions you require for your project.
+    The goal of this project is to allow for drop-in replacement functions from various C Standard
+    Libraries without the need to include the complete library; you can lift out and use only the
+    functions you require for your project.
 
 
 **-- PLATFORM DEPENDENCY --**
 
 
-    There are a collection of low level functions that are win32 api specific included. These are, however, structured in such a way
-    that they can be ported to other platforms without having to rewrite functions they depend on, or that depend on them.
+    There are a collection of low level functions that are win32 api specific included. These are,
+    however, structured in such a way that they can be ported to other platforms without having to
+    rewrite functions they depend on, or that depend on them.
 
 
-    The platform specific functions use win32 api calls directly from kernel32.dll. stdr uses a bootstrapping mechanism that allows
-    for this, so there is no need to #include anything. It should also be failry easy to include code for any other dll you wish to
-    use functions from.
+    The platform specific functions use win32 api calls directly from kernel32.dll. stdr uses a
+    bootstrapping mechanism that allows for this, so there is no need to #include anything. It should
+    also be failry easy to include code for any other dll you wish to use functions from.
 
 
-    I have chosen to typedef various data types so to not create conflicts with other possible definitions. Any platform agnostic
-    typedefs use a stdr_ prefix (and macro definitions a STDR_ prefix). As for platform dependant typedefs and macros,
-    (only windows for now), I have chosen win_, and WIN_ prefixes respectively. This should make it  easy to identify any platform
-    dependent functions and definitions.
+    I have chosen to typedef various data types so to not create conflicts with other possible
+    definitions. Any platform agnostic typedefs use a stdr_ prefix (STDR_ for macro definitions).
+    As for platform dependant typedefs and macros, (only windows for now), I have chosen win_, and
+    WIN_ prefixes respectively. This should make it  easy to identify any platform dependent
+    functions and definitions.
 
 
-    I am avoiding internal/cross dependencies when ever possible, but sometimes these are a necessity. I have left comments for the
-    function prototypes that will give you an idea on what internal dependencies functions may have.
+    I am avoiding internal/cross dependencies when ever possible, but sometimes these are a
+    necessity. I have left comments for the function prototypes that will give you an idea on
+    what internal dependencies functions may have.
 
 
 **-- TARGETTED HEADERS --**
@@ -215,53 +220,58 @@
 **-- U MAD, BRO? WHY NOT JUST USE THE STANDARD LIBRARY? --**
 
 
-    My goal is to generate as small executables as possible. When making demo scene productions, there are sometimes rules in
-    demo- and intro competitions that limit the size a demo scene production can be.
+    My goal is to generate as small executables as possible. When making demo scene productions,
+    there are sometimes rules in demo- and intro competitions that limit the size a demo scene
+    production can be.
 
-    A few common size limitations can be 64kb, 40kb, and 4kb. This is the total size a self contained executable is allowed to be,
-    excluding api calls accessible directly in a newly installed operating system.
+    A few common size limitations can be 64kb, 40kb, and 4kb. This is the total size a self contained
+    executable is allowed to be, excluding api calls accessible directly in a newly installed operating
+    system.
 
-    These size limitations will sometimes force demo scene developers to be creative, and this is one of the creative ways I aim to
-    utilize for this challenge!
+    These size limitations will sometimes force demo scene developers to be creative, and this is one
+    of the creative ways I aim to utilize for this challenge!
 
 
 **-- USAGE --**
 
 
-    As these are drop-in replacements, just use them in the same way you would use the standard library functions. Just copy any
-    definitions and functions you want to use with your code and go from there.
+    As these are drop-in replacements, just use them in the same way you would use the standard library
+    functions. Just copy any definitions and functions you want to use with your code and go from there.
 
 
     To try this out you can build it like so:
 
             gcc -o stdr.exe stdr.c -m32 -nostdlib -lkernel32 "-Wl,-e,__start"
 
-    I have included some test cases in main_entry(), but you can of course add more if you wish to try various functions out.
+    I have included some test cases in main_entry(), but you can of course add more if you wish to try
+    various functions out.
 
 
-    There are tons of size related optimization flags that can be used with gcc, but be careful using the -flto flag with this one as
-    it can possibly break the variadic functions. It's a sneaky one and can appear to work under certain conditions but will likely
-    make kernel32.dll segfault under others. There is no error handling here if api call arguments would be null when they shouldn't.
+    There are tons of size related optimization flags that can be used with gcc, but be careful using the
+    -flto flag with this one as it can possibly break the variadic functions. It's a sneaky one and can
+    appear to work under certain conditions but will likely make kernel32.dll segfault under others.
+    There is no error handling here if api call arguments would be null when they shouldn't.
     You have been warned.
 
 
-    As the scope is focused on size optimization over efficiency, I strongly recommend you to do your own benchmark tests to compare
-    these with stdlib
+    As the scope is focused on size optimization over efficiency, I strongly recommend you to do your
+    own benchmark tests to compare these with stdlib
 
 
 **-- Are these feature complete? --**
 
 
-    As I have only included the functionality I need for my current project, some things may be missing or lacking compared to their
-    standard library relatives. My goal here is not to make full replacements for the standard library.
+    As I have only included the functionality I need for my current project, some things may be missing or
+    lacking compared to their standard library relatives. My goal here is not to make full replacements for
+    the standard library.
 
 
 **License**
 
 
-    This project is released under the MIT license. If you are a demo scener and choose to use any of this code in your productions,
-    additional conditions apply as follows: Greetings to dMG and the mighty crews of diViNE sTYLERs, UP ROUGH, and TiTAN
-    in your production! :D
+    This project is released under the MIT license. If you are a demo scener and choose to use any of this
+    code in your productions, additional conditions apply as follows: Greetings to dMG and the mighty crews
+    of diViNE sTYLERs, UP ROUGH, and TiTAN in your production! :D
 
 
 Cheerios!
