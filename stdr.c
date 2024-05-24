@@ -1,5 +1,5 @@
 
-#include "allstdreplfunc.h"
+#include "stdr.h"
 
 /*------------*/
 /* Prototypes */
