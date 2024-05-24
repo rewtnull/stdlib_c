@@ -22,14 +22,14 @@
 
 
     The platform specific functions use win32 api calls directly from kernel32.dll. stdr uses a
-    bootstrapping mechanism that allows for this, so there is no need to #include anything. It should
-    also be failry easy to include code for any other dll you wish to use functions from.
+    bootstrapping mechanism that allows for this, so there is no need to #include anything. It
+    should also be failry easy to include code for any other dll you wish to use functions from.
 
 
     I have chosen to typedef various data types so to not create conflicts with other possible
     definitions. Any platform agnostic typedefs use a stdr_ prefix (STDR_ for macro definitions).
-    As for platform dependant typedefs and macros, (only windows for now), I have chosen win_, and
-    WIN_ prefixes respectively. This should make it  easy to identify any platform dependent
+    As for platform dependant typedefs and macros, (only windows for now), I have chosen win_,
+    and WIN_ prefixes respectively. This should make it  easy to identify any platform dependent
     functions and definitions.
 
 
