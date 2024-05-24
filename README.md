@@ -73,7 +73,8 @@
     There is also this:
 
 
-    void stdr_str_out(const char* message); - outputs string to console using the kernel32.dll WriteConsoleA()
+    void stdr_str_out(const char* message);     - outputs string to console using
+                                                  the kernel32.dll WriteConsoleA()
 
 
 **-- HEADER --**
