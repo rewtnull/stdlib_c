@@ -222,7 +222,7 @@
 
 
     My goal is to generate as small executables as possible. When making demo scene productions,
-    there are sometimes rules in demo- and intro competitions that limit the size a demo scene
+    there are sometimes demo- and intro competition rules that limit the size a demo scene
     production can be.
 
     A few common size limitations can be 64kb, 40kb, and 4kb. This is the total size a self contained
