@@ -183,8 +183,8 @@
     -----------------------------------------------------------------------------------------------------------
 
 
-        void*       stdr_memcpy(void* dst, const void* src, stdr_size_t n);
         int         stdr_memcmp(const void* s1, const void* s2, stdr_size_t n);
+        void*       stdr_memcpy(void* dst, const void* src, stdr_size_t n);
         void*       stdr_memset(void* s, int c, stdr_size_t n);
         char*       stdr_strcat(char* dst, const char* src);
         char*       stdr_strchr(const char* str, int c);
