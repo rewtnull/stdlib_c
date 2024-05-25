@@ -83,17 +83,17 @@
     The following macros are defined and replace the ones of the standard library:
 
 
-    STDR_NULL                                                          replaces NULL
-    stdr_offsetof()                                                    replaces offsetof()
+        STDR_NULL                                                          replaces NULL
+        stdr_offsetof()                                                    replaces offsetof()
 
 
     An (incomplete) implemetation of variadic definitions:
 
 
-    stdr_va_list                                                       replaces va_list
-    stdr_va_start                                                      replaces va_start
-    stdr_va_arg                                                        replaces va_arg
-    stdr_va_end                                                        replaces va_end
+        stdr_va_list                                                       replaces va_list
+        stdr_va_start                                                      replaces va_start
+        stdr_va_arg                                                        replaces va_arg
+        stdr_va_end                                                        replaces va_end
 
 
     For more information, browse stdr.h
