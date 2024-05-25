@@ -190,7 +190,7 @@
         char*       stdr_strchr(const char* str, int c);
         int         stdr_strcmp(const char* str1, const char* str2);
         char*       stdr_strcpy(char* dst, const char* src);
-        char*       stdr_strdup(const char* str); // depends on stdr_strlen, stdr_malloc
+        char*       stdr_strdup(const char* str);
         stdr_size_t stdr_strlen(const char* str);
         int         stdr_strncmp(const char* s1, const char* s2, stdr_size_t n);
         char*       stdr_strrchr(const char* str, int c);
