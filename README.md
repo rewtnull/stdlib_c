@@ -3,7 +3,7 @@
 **-- ABOUT --**
 
 
-    stdr - or "studder" (C Standard Library Replacement) - is a (fairly) modular subset replacement for a variety of
+    stdr - or "stutter" (C Standard Library Replacement) - is a (fairly) modular subset replacement for a variety of
     C standard library functions. If you aim at using that elusive -nostdlib flag in gcc, and/or want
     to size optimize your executables, these could be for you!
 
