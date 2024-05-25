@@ -16,12 +16,12 @@
 **-- PLATFORM DEPENDENCY --**
 
 
-    There are a collection of low level functions that are win32 api specific included. These are,
+    There are a collection of low level functions included that are win32 api specific. These are,
     however, structured in such a way that they can be ported to other platforms without having to
     rewrite functions they depend on, or that depend on them.
 
 
-    The platform specific functions use win32 api calls directly from kernel32.dll. stdr uses a
+    The platform specific functions make api calls directly from kernel32.dll. stdr uses a
     bootstrapping mechanism that allows for this, so there is no need to #include anything. It
     should also be failry easy to include code for any other dll you wish to use functions from.
 
