@@ -8,8 +8,8 @@
     to size optimize your executables, these could be for you!
 
 
-    The goal of this project is to allow for drop-in replacement functions from various C Standard
-    Libraries without the need to include the complete library; you can lift out and use only the
+    The goal of this project is to allow for drop-in replacements for various C Standard
+    Library functions without the need to include a complete library; you can lift out and use only the
     functions you require for your project.
 
 
